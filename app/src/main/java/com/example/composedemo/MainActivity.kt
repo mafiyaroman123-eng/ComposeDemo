@@ -54,3 +54,13 @@ fun DemoTextPreview() {
     }
 }
 
+@Composable
+fun DemoSlider(sliderPosition: Float, onPositionChange: (Float) -> Unit ) {
+    Slider(
+        modifier = Modifier.padding(10.dp),
+        valueRange = 20f..38f,
+        value = sliderPosition,
+        onValueChange = { onPositionChange(it) }
+    )
+}
+
